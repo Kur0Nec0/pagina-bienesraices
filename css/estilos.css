@@ -1,0 +1,404 @@
+/*ESTILOS GLOBALES*/
+
+/*Para reescalar elementos en el HTMl*/
+html {
+    font-size: 62.5%; /*62.5% = 10px de 16px*/
+    /*Simplemente dividimos los pixeles entre 10 y lo sustituimos por REM*/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Ajuste de las imagenes*/
+img {
+    max-width: 100%;
+}
+/*Encargado de centrar el contenido en un espacio definido*/
+.contenedor {
+    max-width: 120rem; /*1200px*/
+    margin: 0 auto 0 auto;
+}
+
+h1 {
+    font-size: 3.8rem; /*38px*/
+}
+h2 {
+    font-size: 3.4rem; /*34px*/
+}
+h3 {
+    font-size: 3rem; /*30px*/
+}
+h4 {
+    font-size: 2.6rem; /*26px*/
+}
+
+/*-------------------------------------------------*/
+
+/*UTILIDADES*/
+
+/*Para dare un margen a una clase*/
+.seccion {
+    margin-top: 2rem; /*20px*/
+    margin-bottom: 2rem;
+}
+
+/*Para darle grosor a un texto*/
+.fw-300 {
+    font-weight: 300;
+}
+
+/*Para centrar texto*/
+.centrar-texto {
+    text-align: center;
+}
+
+/*Botones*/
+.d-block {
+    display: block!important; /*Que el boton agarre todo el bloque | !important sirve para que display inline-block no sobrescriba el display block*/
+}
+.boton {
+    color: white;
+    font-weight: 700; /*Grosor del texto*/
+    text-decoration: none; /*Quitar subrayado*/
+    font-size: 1.8rem; /*Tamaño dle texto*/
+    padding: 1rem 3rem; /*1rem arriba y abajo, 3rem a los lados*/
+    display: block; /*Permite ajustar el enlace*/
+    margin-top: 2rem;
+    display: inline-block;
+    text-align: center; /*Centrar texto*/
+    border: none; /*Quitamos el borde de los botones*/
+}
+.boton:hover {
+    cursor: pointer; /*Agregamos la manita cuando se pasa por encima de un boton*/
+}
+.boton-amarillo {
+    background: #E68400;
+}
+.boton-verde {
+    background: #3FB203;
+}
+
+/*Alinear texto o imagen a la derecha*/
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end; /*Colocar el boton o imagen a la derecha*/
+}
+
+/*Agregar interlineado a parrafos*/
+.interlineado {
+    line-height: 3rem;
+}
+
+/*Contenido centrado*/
+.contenido-centrado {
+    max-width: 80rem;
+}
+
+/*-------------------------------------------------*/
+
+/*Cuerpo de la pagina web*/
+body {
+    font-family: 'Lato', sans-serif; /*Agregando fuente de la pagina*/
+    font-size: 1.6rem; /*16px que es el default*/
+}
+
+/*Estilos header*/
+.header-sitio {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+    margin: 0;
+    background-size: cover;
+}
+.header-sitio.inicio {
+    background: url(../img/header.jpg); 
+    background-position: center center;  
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem; /*600px*/
+}
+
+/*Ajuste y estilo de a barra superior*/
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem; /*20px*/
+}
+
+/*Alineacion de contenido de header*/
+.contenido-header {
+    height: 100%; /*Abarca todo el espacio del contenedor*/
+    display: flex;
+    flex-direction: column; /*Ordena en forma de columna el contenido*/
+    justify-content: space-between;
+}
+
+/*Modificar h1 del header*/
+.contenido-header h1 {
+    color: white;
+}
+
+/*Barra de navegacion*/
+.navegacion a {
+    color: white;
+    text-decoration: none; /*Elimina la decoracion de los vinculos*/
+    font-size: 1.8rem; /*18px*/
+    margin-right: 1rem; /*10px*/
+}
+
+/*Cambiar color al posicionarnos encima de un enlace*/
+.navegacion a:hover {
+    color: darkorange;
+}
+
+/*ICONO NOSOTROS*/
+.iconos-nosotros {
+    display: flex; /*Posicionar los elementos en el contenedor*/
+    justify-content: space-between;
+}
+
+.icono {
+    flex-basis: calc(33.3% - 1rem); /*33.3% es la division del 100% entre 3 - damos 1 rem de separacion entre cada elemento*/
+    text-align: center; /*Centramos el contenido*/
+    line-height: 3rem; /*Interlineado*/
+}
+
+/*Modificar titulo*/
+.icono h3 {
+    text-transform: uppercase; /*Mayusculas*/
+}
+
+.encabezado-nosostros {
+    font-weight: 300; /*Cambiar ancho de texto*/
+    text-align: center;
+}
+
+/*Contenedor de anuncios*/
+.contenedor-anuncios {
+    display: flex;
+    justify-content: space-between; /*Separacion entre cada contenedor de anuncio*/
+    flex-wrap: wrap; /*Este se encargara de que se respete la division de 3 columnas que se hace en la clase de anuncio*/
+}
+
+/*Anuncios por separado*/
+.anuncio {
+    flex-shrink: 0; /*Para que los anuncios no se encojan en la pantalla*/
+    flex-basis: calc(33.3% - 1rem); /*10px*/
+    border: 2px solid #CBCBCB; /*px, tipo de borde y color de borde*/
+    background: #D9D9D9;
+    margin-bottom: 2rem; /*Agregra separacion a bajo de cada anuncio*/
+}
+
+/*Ajustar el contenido dentro del anuncio*/
+.contenido-anuncio {
+    padding: 2rem; /*Padding para todas las direcciones*/
+}
+.contenido-anuncio h3 {
+    margin: 0; /*Eliminamos margen para los h3 del anuncio*/
+}
+
+/*Ajustes del precio*/
+.precio {
+    color: green;
+    font-weight: 700; /*Grosor del precio*/
+}
+.iconos-caracteristicas {
+    list-style: none; /*Editar estilo de las listas*/
+    padding: 0; /*Elimina los espacios a los lados*/
+    display: flex; /*Quitara el espacio que hay uno del otro*/
+    justify-content: space-evenly; /*Centrar el contenido agregando espacios*/
+    max-width: 50rem;
+    flex: 1;
+}
+.iconos-caracteristicas li {
+    display: flex; /*Pondra el numero y el icono uno al lado del otro*/
+}
+.iconos-caracteristicas li img {
+    margin-right: 2rem; /*Agregar un margen entre el icono y el numero*/
+}
+
+/*Imagen de seccion de contacto*/
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center; /*Colocar imagen en el centro del contenedor*/
+    background-size: cover; /*Que la imagen abarque todo el contenedor*/
+    height: 40rem; /*400px*/
+    display: flex;
+    align-items: center; /*Alinear contenido en el centro*/
+}
+.contenido-contacto {
+    flex: 1;
+    color: white;
+}
+.contenido-contacto p {
+    font-size: 2rem; /*Agranda el texto del contenido de contacto*/
+}
+
+/*Seccion inferior*/
+.seccion-inferior {
+    display: flex;
+    justify-content: space-between; /*Espacio entre contenido*/
+}
+.seccion-inferior .blog {
+    flex-basis: 60%; /*Para que el blog abarque un 60% de nuestro contenedor*/
+}
+.seccion-inferior .testimoniales {
+ flex-basis: calc(40% - 2rem); /*Para que los testimoniales abarquen un 40% del contenedor con 20 pixeles de separacion*/
+}
+
+/*Entradas de blog*/
+.entrada-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem; /*Da separacion entre las entradas de blog hacia abajo*/
+}
+.entrada-blog:last-of-type {
+    margin-bottom: 0; /*Selecciona el ultimo elemento del blog y quita el margen de la parte de abajo*/
+}
+.entrada-blog .imagen-blog {
+    flex-basis: 40%;
+}
+.entrada-blog .texto-entrada {
+    flex-basis: calc(60% - 3rem);
+}
+.texto-entrada h4{
+    margin: 0; /*Elimina el margen del titulo*/
+}
+.texto-entrada span{
+    color: #E68400; /*Cambiamos el color de los span de nuestro blog (fecha y autor del articulo)*/
+}
+.entrada-blog .texto-entrada p{
+    line-height: 3rem; /*Interlineado entre los textos del blog*/
+}
+.entrada-blog a {
+    color: black;
+    text-decoration: none;
+}
+
+/*Pseudoelemento*/
+.texto-entrada h4::after { /*Para agregar pseudoelementos a un objeto despues de*/
+    /*Agregar una linea verde debajo del texto*/
+    content: ''; /*Dejamos espacio vacio para que de un salto de linea*/
+    display: block; /*Para agregar elementos*/
+    width: 15rem; /*150px (largo)*/
+    height: .5rem; /*5px (alto)*/
+    background-color: #3FB203; /*Color de la linea*/
+    margin-top: .5rem; /*Margen superior con el texto*/
+}
+
+/*Testimoniales*/
+.recuadro-testimonial {
+    background-color: #3FB203; /*Color fondo*/
+    font-size: 2.3rem; /*Tamaño de la fuente*/
+    padding: 1.5rem; /*Espacio hace dentro del contenedor*/
+    color: white; /*Color del texto*/
+    line-height: 4rem;
+    border-radius: 2rem; /*Permite redondear las esquinas de una imagen o fondo cuadrado*/
+}
+.recuadro-testimonial p {
+    text-align: right; /*Alinea el parrafo a la derecha*/
+    margin-right: 2rem; /*Damo un poco de margen a la derecha*/
+}
+.recuadro-testimonial blockquote::before {
+    content: '';
+    background-image: url(../img/comilla.svg); /*Importamos la imagen*/
+    width: 4rem; /*Ancho de la imagen*/
+    height: 4rem; /*Alto de la imagen*/
+    display: block;
+    position: absolute; /*Nos permite darle posicion absoluta a la comilla para poder mover nuestros elementos*/
+    left: -2rem; /*Movemos la imagen 20 pixeles a la izquierda*/
+}
+.recuadro-testimonial blockquote {
+    position: relative;
+    padding-left: 5rem; /*Damos un margen al texto a la izquierda para pder ajustar nuestra imagen de comilla*/
+    font-weight: 300; /*Ponemos la fuente un poco mas delgada*/
+}
+
+/*Contenedor footer*/
+.site-footer {
+    background-color: #333333;
+    margin: 0;
+}
+.derechos-autor {
+    margin: 0;
+    color: white;
+}
+.contenedor-footer {
+    padding: 3rem 0rem; /*30px arriba y abajo, 0px a los lados*/
+    display: flex;
+    justify-content: space-between; /*Espacio entre parrafo*/
+}
+
+/*ESTILOS PARA PAGINAS SECUNDARIAS*/
+
+/*Pagina de vinculo nosostros*/
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 50% 50%; /*50% imagen, 50% para texto*/
+    grid-column-gap: 2rem; /*Agrega separacion entre las dos columnas*/
+}
+.texto-nosotros blockquote {
+    font-weight: 900; /*Grosor del mini titulo*/
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 0 3rem 0;
+}
+.texto-nosotros p {
+    font-size: 1.8rem; /*Tamaño del texto*/
+    line-height: 2.7rem;
+}
+
+/*Pagina de informacion de una propiedad*/
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between; /*Acomoda las imagenes dando espacio entre ellas*/
+    align-items: center; /*Centra las imagenes y texto en el centro horizontalmente*/
+}
+
+/*Contacto y formulario*/
+.contacto-formulario p {
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+label {
+    display: block; /*Que agarre todo el espacio disponible*/
+    margin-top: 2rem;
+    text-transform: uppercase; /*Ponemos el texto en mayusculas*/
+    font-weight: 700; /*Agrandamos la fuente*/
+}
+legend {
+    font-size: 2.4rem;
+    color: #333333;
+}
+input:not([type="submit"]), /*Para que abarque todos los input menos el type que no se quiera modificar*/
+textarea,
+select
+ {
+    /*Para agregar un corchete con un type debe ir pegado / input[type="..."]*/
+    margin-top: .5rem;
+    background-color: #DCDCDC;
+    padding: 1rem; /*Tamaño*/
+    display: block;
+    width: 100%; /*Abarca todo el ancho disponible*/
+    border: none; /*Quitamos los bordes*/
+    border-radius: 1rem; /*Ponemos esquinas redondeadas*/
+}
+input[type="radio"] { /*Arreglando el tamaño de los botones de seleccion*/
+    width: auto; /*Que tome el tamaño que requiere*/
+    margin: 2rem;
+}
+select { /*Para arreglar el select. Solo afecta a select*/
+    -webkit-appearance: none; /*Se necesita el prefijo para que funcione*/
+    appearance: none;
+}
+textarea { /*Para acomodar el textarea. Solo afecta al textarea*/
+    height: 15rem; /*Tamaño del mensaje*/
+}
+.forma-contacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
